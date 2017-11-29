@@ -1,0 +1,64 @@
+1. clone project from master romote branch to local
+$ git clone https://github.com/clevycorn/zzlgit.git	// the first time:clone
+$ cd zzlgit
+
+// create some new files in the local directory
+
+$ git status -s
+?? 4313.jpg_wh1200.jpg
+?? config-repo/
+?? gitpush.txt
+?? liuzhuling.txt
+
+$ git add .
+$ git commit -am 'XXXXX'
+
+
+2. create and use a new branch
+$ git checkout -b func_zhangzl_20171129_v1
+Switched to a new branch 'func_zhangzl_20171129_v1'
+> zzlgit (func_zhangzl_20171129_v1)
+$ git status -s
+?? 4313.jpg_wh1200.jpg
+?? config-repo/
+?? gitpush.txt
+?? liuzhuling.txt
+
+3. fetch project from test remote branch
+1)no test branch on local
+// 当需要获取最新的代码时，使用git fetch 或者 $ git fetch origin zzltest:zzltest 命令从远程zzltest 分支上拉取最新的代码，必须切换至master主分支
+Administrator@USER-20171107DW MINGW64 /d/clevycorn/Samples/zzlgit (master)
+$ git fetch origin zzltest:zzltest
+2)Exist zzltest branch on local
+// 取回远程test分支的更新，再与本地的分支合并
+Administrator@USER-20171107DW MINGW64 /d/clevycorn/Samples/zzlgit (zzltest)
+$ git pull origin zzltest
+
+4. merge code
+Administrator@USER-20171107DW MINGW64 /d/clevycorn/Samples/zzlgit (zzltest)
+$ git status -s
+?? 4313.jpg_wh1200.jpg
+?? config-repo/
+?? gitpush.txt
+?? liuzhuling.txt
+
+Administrator@USER-20171107DW MINGW64 /d/clevycorn/Samples/zzlgit (zzltest)
+$ git merge func_zhangzl_20171129_v1
+Already up to date.
+
+5. push code
+git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
